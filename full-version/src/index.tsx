@@ -1,13 +1,26 @@
-import React from 'react';
+import { StrictMode } from 'react';
+
+// third-party
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider as ReduxProvider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
+// project imports
+import App from 'App';
+import { persister, store } from 'store';
+import reportWebVitals from 'reportWebVitals';
+
+// ------------------------| MAIN - REACT APP  |------------------------ //
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <ReduxProvider store={store}>
+      <PersistGate loading={null} persistor={persister}>
+        <App />
+      </PersistGate>
+    </ReduxProvider>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

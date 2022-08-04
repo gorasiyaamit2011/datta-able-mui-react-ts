@@ -1,5 +1,7 @@
 import * as Icon from 'react-feather';
 
+// ------------------------| APP -   |------------------------ //
+
 function App() {
   return (
     <>

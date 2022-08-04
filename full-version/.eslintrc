@@ -21,6 +21,7 @@
     "import/no-useless-path-segments": "error",
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/default-param-last": "off",
     "object-curly-spacing": ["error", "always"],
     "@typescript-eslint/no-unused-vars": [
       "error",
