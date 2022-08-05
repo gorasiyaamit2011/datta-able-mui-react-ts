@@ -9,6 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import App from 'App';
 import { persister, store } from 'store';
 import reportWebVitals from 'reportWebVitals';
+import { ConfigProvider } from 'contexts/ConfigContext';
 
 // ------------------------| MAIN - REACT APP  |------------------------ //
 
@@ -17,7 +18,9 @@ root.render(
   <StrictMode>
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persister}>
-        <App />
+        <ConfigProvider>
+          <App />
+        </ConfigProvider>
       </PersistGate>
     </ReduxProvider>
   </StrictMode>
