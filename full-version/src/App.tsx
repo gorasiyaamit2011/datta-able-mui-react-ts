@@ -1,4 +1,9 @@
+// @mui
+import { Button } from '@mui/material';
+
+// icons
 import * as Icon from 'react-feather';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
 
 // ------------------------| APP -   |------------------------ //
 
@@ -10,6 +15,8 @@ function App() {
       <Icon.Camera color="blue" size={45} />
       <Icon.Camera color="red" />
       <Icon.Home />
+      <Button>Click Me</Button>
+      <AcUnitIcon />
     </>
   );
 }
